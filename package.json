@@ -1,0 +1,30 @@
+{
+  "name": "solidity-smart-contracts",
+  "version": "0.1.0",
+  "main": "index.js",
+  "description": "List of smart contracts in Solidity.",
+  "repository": "https://github.com/FriendlyUser/solidity-smart-contracts.git",
+  "author": "FriendlyUser <pandabeareee@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "vuepress",
+    "solidity",
+    "smart-contracts"
+  ],
+  "scripts": {
+    "docs:dev": "node node_modules/vuepress/bin/vuepress dev docs",
+    "docs:build": "node node_modules/vuepress/bin/vuepress.js build docs",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "solidity:docs": "node solidityDocs.js"
+  },
+  "devDependencies": {
+    "@soldoc/soldoc": "^0.4.3",
+    "vuepress": "^0.13.0"
+  },
+  "dependencies": {
+    "markdown-it-plantuml": "^1.1.0",
+    "markdown-it-task-lists": "^2.1.1"
+  }
+}
