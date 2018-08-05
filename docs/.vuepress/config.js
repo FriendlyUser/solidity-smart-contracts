@@ -20,15 +20,16 @@ module.exports = {
     nav:  genNavBarList(),
     // consider making this sidebar generation completely automatic, but would I prefer to make some control over titling and selected folders that are displayed.   
     // for nested folders in the sidebar, manually enter the folder names using genSideBarConfigFolder, but control the main control direction
-    sidebar: {
-      '/contracts/': genSideBarConfigFolder('/contracts/'),
-      /*  '/contracts/': [
+    
+    // the format of the sidebar folder should look like 
+    /*  '/contracts/': [
         '',     // /foo/ 
         'Users',  // /foo/one.html 
         'TodoList', // /foo/two.html 
         'games/Users'
       ], */
-
+    sidebar: {
+      '/contracts/': genSideBarConfigFolder('/contracts/'),
       '/notes/': [
         '',      /* /notes/ */
       ],
@@ -36,8 +37,6 @@ module.exports = {
       // fallback
       '/': [
         '',        /* / */
-        'contact', /* /contact.html */
-        'about'    /* /about.html */
       ]
 
     },
