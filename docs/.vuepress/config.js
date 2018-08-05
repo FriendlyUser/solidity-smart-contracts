@@ -21,12 +21,13 @@ module.exports = {
     // consider making this sidebar generation completely automatic, but would I prefer to make some control over titling and selected folders that are displayed.   
     // for nested folders in the sidebar, manually enter the folder names using genSideBarConfigFolder, but control the main control direction
     sidebar: {
-       '/contracts/': [
-        '',     /* /foo/ */
-        'Users',  /* /foo/one.html */
-        'TodoList', /* /foo/two.html */
+      '/contracts/': genSideBarConfigFolder('/contracts/'),
+      /*  '/contracts/': [
+        '',     // /foo/ 
+        'Users',  // /foo/one.html 
+        'TodoList', // /foo/two.html 
         'games/Users'
-      ],
+      ], */
 
       '/notes/': [
         '',      /* /notes/ */
@@ -115,8 +116,9 @@ function getFilesInDir(directoryName,numberToCut) {
     var files = []
     // sidebar settings
     const relPath = path.join('docs', directoryName)
-    fromDir(relPath,/\.md$/,false,function(filename){
+    fromDir(relPath,/\.md$/,true,function(filename){
         console.log('-- found:  ',filename);
+        const newName = filename.substring(numberToCut).split('.').slice(0, -1).join('.')
         
         let baseName = path.basename(filename)
         baseName = filename.split('.').slice(0, -1).join('.')
@@ -131,15 +133,15 @@ function getFilesInDir(directoryName,numberToCut) {
         // check if file contains path 
         else if (filename.match(/\\/) != null){
             // cut unnecessary folders and 
-            const CoolName = filename.replace(/\\/g,"/");
-            const newName = CoolName.substring(numberToCut).split('.').slice(0, -1).join('.')
-            files.push(newName)
+            const properFilePath = newName.replace(/\\/g,"/");
+            files.push(properFilePath)
         }
         // file is in current directory, just add as is.
         else {
             files.push(baseName)
         }
     });
+    files.sort()
     return files
 }
 
@@ -171,25 +173,21 @@ function getFilesInDirBase(directoryName) {
 }
 
 // pass in the folder relative to the folder docs
-function genSideBarConfigFolder (titleName,directoryName) {
-    const rawFilePaths = getFilesInDir(directoryName,4)
+function genSideBarConfigFolder (directoryName) {
+    const pathPathCut = 'docs/contracts/'.length
+    const rawFilePaths = getFilesInDir(directoryName, pathPathCut)
     console.log('The file Paths are')
     console.log(rawFilePaths)
     
-    const logFileSideBar = "docs/.vuepress/configSideBar" + titleName + ".txt"
+    /*const logFileSideBar = "docs/.vuepress/configSideBar" + directoryName + ".txt"
     fs.writeFile(logFileSideBar, util.inspect(rawFilePaths, {depth: null}), function(err) {
     if(err) {
         return console.log(err);
     }
     });
     console.log("Saving sidebar config for " + titleName);
-    return [
-        {
-            title: titleName,
-            collapsable: true,
-            children: rawFilePaths
-        }
-    ]
+    */
+    return rawFilePaths
 }
 
 // doesn't work, fix later, can't figure out how to generate { text: link:} recursively? Or maybe have another function that returns text: link 
