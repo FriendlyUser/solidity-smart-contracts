@@ -122,11 +122,11 @@ function getFilesInDir(directoryName,numberToCut) {
         let baseName = path.basename(filename)
         baseName = filename.split('.').slice(0, -1).join('.')
         
-        baseName = baseName.toUpperCase()
+        testName = baseName.toUpperCase()
         //console.log(baseName)
         
         // Add README as ''
-        if (baseName.indexOf('README') !== -1) {
+        if (testName.indexOf('README') !== -1) {
             files.push('')
         }
         // check if file contains path 
