@@ -117,27 +117,28 @@ function getFilesInDir(directoryName,numberToCut) {
     const relPath = path.join('docs', directoryName)
     fromDir(relPath,/\.md$/,true,function(filename){
         console.log('-- found:  ',filename);
-        const newName = filename.substring(numberToCut).split('.').slice(0, -1).join('.')
+        
+        const vuepressLinkName = filename.substring(numberToCut).split('.').slice(0, -1).join('.')
         
         let baseName = path.basename(filename)
         baseName = filename.split('.').slice(0, -1).join('.')
         
-        testName = baseName.toUpperCase()
+        baseName = baseName.toUpperCase()
         //console.log(baseName)
         
         // Add README as ''
-        if (testName.indexOf('README') !== -1) {
+        if (baseName.indexOf('README') !== -1) {
             files.push('')
         }
-        // check if file contains path 
+        // check if file contains windows path ending  
         else if (filename.match(/\\/) != null){
             // cut unnecessary folders and 
-            const properFilePath = newName.replace(/\\/g,"/");
+            const properFilePath = vuepressLinkName.replace(/\\/g,"/");
             files.push(properFilePath)
         }
-        // file is in current directory, just add as is.
+        // CI/CD, file path works with linux as is .
         else {
-            files.push(baseName)
+            files.push(vuepressLinkName)
         }
     });
     files.sort()
