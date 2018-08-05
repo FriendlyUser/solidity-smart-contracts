@@ -10,9 +10,9 @@ addons:
         packages:
             - g++-4.8
 install:
-    - npm install -g vuepress
+    - npm install
 script:
-    - npm run build
+    - npm run docs:build
 cache:
     directories:
         - "node_modules"
