@@ -65,3 +65,5 @@ The Hedera ledger will use proof-of-stake. When a node joins the system, it must
 accounts that it can control, and prove that it has the private keys for those accounts. From then on,
 the amount of cryptocurrency in those accounts will be used to weight its votes in the hashgraph virtual
 voting algorithm. 
+
+Another good source of info is my blockchain [lwarp](http://bchain-notes-personal.surge.sh) notes.

@@ -14,5 +14,5 @@ A statically generated site via vuepress and the soldoc solidity documentation w
 
 To generate markdown documentation make sure [soldoc](https://github.com/dev-matan-tsuberi/soldoc) is installed.
 ```sh
-soldoc -o ./docs/contracts --log ./docs/contracts/ReadMe.md
+soldoc -o ./docs/contracts --log ./docs/contracts/Soldoc.md
 ```

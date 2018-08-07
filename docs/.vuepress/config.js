@@ -31,9 +31,9 @@ module.exports = {
     sidebar: {
       '/contracts/': genSideBarConfigFolder('/contracts/'),
       '/notes/': [
-        '',      /* /notes/ */
-      ],
-
+        '',
+        'IntroBchain'
+      ],      /* /notes/ */
       // fallback
       '/': [
         '',        /* / */
