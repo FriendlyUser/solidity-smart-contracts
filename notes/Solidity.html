@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Solidity Notes  | Solidity Smart Contracts</title>
+    <meta name="description" content="Documented for smart contracts that were interesting to me.">
+    
+    
+    <link rel="preload" href="/solidity-smart-contracts/assets/css/0.styles.c3cdea8d.css" as="style"><link rel="preload" href="/solidity-smart-contracts/assets/js/app.a487b7af.js" as="script"><link rel="preload" href="/solidity-smart-contracts/assets/js/24.78908c06.js" as="script"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/11.c8308e88.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/3.68289986.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/4.3485bd66.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/5.4573f5e1.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/6.bcb6c774.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/7.c607b4c8.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/8.6cea5abd.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/9.dcda9882.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/10.6a20baad.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/12.96e939aa.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/13.0a5c62c3.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/14.de938d4c.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/15.823a1e19.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/16.be139b5d.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/17.1b6bb809.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/18.072b734e.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/19.97c73830.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/20.ca011353.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/21.e851c435.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/22.44c75121.js"><link rel="prefetch" href="/solidity-smart-contracts/assets/js/23.d814ebfe.js">
+    <link rel="stylesheet" href="/solidity-smart-contracts/assets/css/0.styles.c3cdea8d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/solidity-smart-contracts/" class="home-link router-link-active"><!----> <span class="site-name">Solidity Smart Contracts</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/solidity-smart-contracts/" class="nav-link">Home</a></div><div class="nav-item"><a href="/solidity-smart-contracts/contracts/" class="nav-link">contracts</a></div><div class="nav-item"><a href="/solidity-smart-contracts/mindmap/" class="nav-link">mindmap</a></div><div class="nav-item"><a href="/solidity-smart-contracts/notes/" class="nav-link router-link-active">notes</a></div> <a href="https://github.com/FriendlyUser/solidity-smart-contracts" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Contribute!
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/solidity-smart-contracts/" class="nav-link">Home</a></div><div class="nav-item"><a href="/solidity-smart-contracts/contracts/" class="nav-link">contracts</a></div><div class="nav-item"><a href="/solidity-smart-contracts/mindmap/" class="nav-link">mindmap</a></div><div class="nav-item"><a href="/solidity-smart-contracts/notes/" class="nav-link router-link-active">notes</a></div> <a href="https://github.com/FriendlyUser/solidity-smart-contracts" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Contribute!
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/solidity-smart-contracts/notes/" class="sidebar-link">Thoughts on blockchain technology</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/solidity-smart-contracts/notes/IntroBchain.html" class="sidebar-link">Bchain</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/solidity-smart-contracts/notes/IntroBchain.html#ponzi-scheme" class="sidebar-link">Ponzi Scheme</a></li></ul></li></ul> </div> <div class="page"> <div class="content"><h2 id="solidity-notes"><a href="#solidity-notes" aria-hidden="true" class="header-anchor">#</a> Solidity Notes</h2> <p>Solidity receives many comparisons to JavaScript, but its closest
+relative is C. Solidity is a strongly typed language with minimal
+functionality that emphasizes limiting storage and CPU usage. It supports
+256-bit data types for the EVM, unlike most languages, which support only
+32- and 64-bit processors.</p> <p>In general, Solidity development should be treated more like building
+a bridge than building a web site. The process is not iterative.</p> <p>Whenever possible, proven legacy code should be used instead of new,
+untested code. Contracts should be thoroughly tested and vetted before
+being deployed to the mainnet.</p> <div class="language-solidity extra-class"><pre class="language-text"><code>pragma solidity ^0.4.15;
+contract HelloWorld {
+ address owner;
+ string greeting = &quot;Hello World&quot;;
+ // Constructor function
+ function HelloWorld () public {
+ owner = msg.sender;
+ }
+ function greet () constant public returns (string) {
+ return greeting; 
+ }
+ function kill () public {
+ require(owner == msg.sender);
+ selfdestruct(owner);
+ }
+}
+</code></pre></div><p>Visibility modifiers determine the contexts in which a function can be
+executed. There are four visibility modifiers in Solidity:</p> <ul><li><p><strong>private</strong>: Only the current contract can use the function.</p></li> <li><p><strong>internal</strong>: Only the current contract and contracts inheriting
+from the current contract can execute the function.</p></li> <li><p><strong>external</strong>: The function can be triggered only by a transaction or
+external contract.</p></li> <li><p><strong>public</strong>: There are no restrictions on how the function can be
+called.</p></li></ul> <p>Only some functions are permitted to modify the state tree. Functions
+declared with one of the following three modifiers cannot modify state
+or send ether:</p> <ul><li><p>view: Can read information from the state tree but cannot modify
+state.</p></li> <li><p>pure: Cannot read or modify the state tree. Th return value depends
+on only the function arguments.</p></li> <li><p>constant: An alias for view. Deprecated to prevent confusion with
+constant variables.</p></li></ul> <p>The modifier payable is special, allowing functions to accept ether.</p> <h5 id="fallback-functions"><a href="#fallback-functions" aria-hidden="true" class="header-anchor">#</a> Fallback Functions</h5> <p>Every contract can have one unnamed function that acts as a default
+function to execute when no other functions can match the transaction
+call or when a transaction is sent to a contract without specifying a
+function.</p> <p>The type mapping is Solidity’s version of a hashmap. It’s a key/value
+store in which both the key and the value must adhere to the specified
+data type. The value can be any data type, whereas the key type is
+restricted to address, bool, the integer types, fixed-size arrays, and
+the fixed-size byte types.</p> <table><thead><tr><th style="text-align:center"></th> <th style="text-align:center"></th></tr></thead> <tbody><tr><td style="text-align:center">Data Types</td> <td style="text-align:center">Zero Value</td></tr> <tr><td style="text-align:center">Integers Values</td> <td style="text-align:center">0</td></tr> <tr><td style="text-align:center">bool</td> <td style="text-align:center">false</td></tr> <tr><td style="text-align:center">address</td> <td style="text-align:center">0x0</td></tr> <tr><td style="text-align:center">Bytes types</td> <td style="text-align:center">0</td></tr> <tr><td style="text-align:center">Array</td> <td style="text-align:center">[](length=0)</td></tr> <tr><td style="text-align:center">mapping</td> <td style="text-align:center">no keys</td></tr></tbody></table> <p>Variables set or initialized to the zero value in Solidity are not
+included in the state tree. The delete keyword in Solidity resets a
+variable to its zero value and deletes the variable from the state tree.</p> <p>Solidity stores locations in two places: in the state tree and in
+memory. Storage in the state tree persists on the blockchain, whereas
+the memory is cleared after every transaction. Storage on the state tree
+is expensive and should be used only when necessary. Memory is cheap and
+should be used whenever possible. Solidity refers to these two locations
+as storage for the state tree and memory for memory.</p> <div class="language-c extra-class"><pre class="language-c"><code>    uint a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token comment">// addition</span>
+    a <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token comment">// shorthand for a = a + 3</span>
+    a<span class="token operator">++</span><span class="token punctuation">;</span> <span class="token comment">// shorthand for a += 1</span>
+    <span class="token number">3</span> <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">;</span> <span class="token comment">// subtraction</span>
+    a <span class="token operator">-</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// shorthand for a = a -1</span>
+    a<span class="token operator">--</span><span class="token punctuation">;</span> <span class="token comment">// shorthand for a -= 1</span>
+    <span class="token number">3</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span> <span class="token comment">// multiplication</span>
+    a <span class="token operator">*</span><span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token comment">// shorthand for a = a * 3</span>
+    <span class="token number">4</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> <span class="token comment">// integer division</span>
+    <span class="token number">3</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> <span class="token comment">// = 1, no floating point arithmetic</span>
+    a <span class="token operator">/</span><span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> <span class="token comment">// shorthand for a = a / 2;</span>
+    <span class="token number">10</span> <span class="token operator">%</span> <span class="token number">2</span><span class="token punctuation">;</span> <span class="token comment">// modulus</span>
+    <span class="token number">2</span><span class="token operator">*</span><span class="token operator">*</span><span class="token number">3</span><span class="token punctuation">;</span> <span class="token comment">// power operator, this is 23</span>
+    <span class="token number">2e7</span><span class="token punctuation">;</span> <span class="token comment">// scientific notation, this is 2 * 107</span>
+</code></pre></div><div class="language-c extra-class"><pre class="language-c"><code>uint a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+uint b <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token comment">// multiply by 10**n to add n zeros</span>
+<span class="token comment">// if you add n zeros, the last n digits will</span>
+<span class="token comment">// be the decimal digits</span>
+uint c <span class="token operator">=</span> <span class="token punctuation">(</span>a <span class="token operator">*</span> <span class="token number">10</span><span class="token operator">*</span><span class="token operator">*</span><span class="token number">6</span><span class="token punctuation">)</span> <span class="token operator">/</span> b<span class="token punctuation">;</span> <span class="token comment">// 3333333</span>
+</code></pre></div><div class="language-c extra-class"><pre class="language-c"><code><span class="token number">1</span> <span class="token operator">==</span> <span class="token number">1</span> wei<span class="token punctuation">;</span>
+<span class="token number">1</span> ether <span class="token operator">==</span> <span class="token number">10</span><span class="token operator">*</span><span class="token operator">*</span><span class="token number">18</span> wei<span class="token punctuation">;</span>
+<span class="token number">2</span> ether <span class="token operator">==</span> <span class="token number">2e18</span> wei<span class="token punctuation">;</span>
+<span class="token number">2</span> finney <span class="token operator">==</span> <span class="token number">.002</span> ether<span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>msg<span class="token punctuation">.</span>value <span class="token operator">==</span> <span class="token number">1</span> ether<span class="token punctuation">)</span> <span class="token function">buyLottoTicket</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+msg<span class="token punctuation">.</span>value<span class="token punctuation">;</span> <span class="token comment">// 1000000000000000000 a.k.a. 1 ether</span>
+</code></pre></div><p>Improper use of the ether transfer functions are the number one source of
+Solidity bugs and hacks. There are three ways to send ether in Solidity:</p> <ul><li>address.transfer(value)</li> <li>address.send(value)</li> <li>address.call.value(value)()</li></ul> <div class="language-solidity extra-class"><pre class="language-text"><code>// DO NOT USE: BAD CODE
+contract TrustFund {
+ address[3] children;
+ function TrustFund (address[3] _children) {
+ children = _children;
+ }
+ function updateAddress(uint child, address newAddress)
+ {
+ require(msg.sender == children[child]);
+ children[child] = newAddress;
+ }
+ function disperse () {
+ uint balance = address(this).balance;
+ children[0].transfer(balance / 2);
+ children[1].transfer(balance / 4);
+ children[2].transfer(balance / 4);
+ }
+ function () payable {}
+}
+</code></pre></div><p>If I’m the second child and I’m upset that I’m not receiving my fair
+share, I can lock up the contract so that no one can access their funds by
+updating my address to an empty contract with no fallback function:
+contract SaltyChild {}</p> <p>Safely Dispersing Ether to a Fixed Number of Addresses</p> <div class="language-solidity extra-class"><pre class="language-text"><code>function disperse () {
+ uint balance = address(this).balance;
+ children[0].send(balance / 2);
+ children[1].send(balance / 4);
+ children[2].send(balance / 4);
+}
+</code></pre></div><p>Race condition is the general term for the class of bugs that can occur when
+calling external contracts. A race condition can occur when any unknown
+state change occurs in an external function call. A re-entrancy attack is one
+form of race condition. Another form of race condition can occur if two
+contracts are both modifying the same variable in a third contract.</p></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/FriendlyUser/solidity-smart-contracts/edit/gh-pages/notes/Solidity.md" target="_blank" rel="noopener noreferrer">Help us improve this page!</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">8/7/2018, 12:29:19 AM</span></div></div> <!----> </div> <!----></div></div>
+    <script src="/solidity-smart-contracts/assets/js/24.78908c06.js" defer></script><script src="/solidity-smart-contracts/assets/js/app.a487b7af.js" defer></script>
+  </body>
+</html>
