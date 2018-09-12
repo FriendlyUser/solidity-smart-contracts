@@ -1,0 +1,4 @@
+[ { text: 'Home', link: '/' },
+  { text: 'contracts', link: '/contracts/' },
+  { text: 'mindmap', link: '/mindmap/' },
+  { text: 'notes', link: '/notes/' } ]

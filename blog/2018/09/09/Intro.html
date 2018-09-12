@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Introduction to Bchain · Smart Contract info</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Bchain"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Introduction to Bchain · Smart Contract info"/><meta property="og:type" content="website"/><meta property="og:url" content="https://friendlyuser.github.io//solidity-smart-contracts/blog/2018/09/09/Intro.html"/><meta property="og:description" content="# Bchain"/><meta property="og:image" content="https://friendlyuser.github.io//solidity-smart-contracts//img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://friendlyuser.github.io//solidity-smart-contracts//img/docusaurus.png"/><link rel="shortcut icon" href="/solidity-smart-contracts//img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://friendlyuser.github.io//solidity-smart-contracts/blog/atom.xml" title="Smart Contract info Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://friendlyuser.github.io//solidity-smart-contracts/blog/feed.xml" title="Smart Contract info Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/solidity-smart-contracts/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/solidity-smart-contracts/"><img class="logo" src="/solidity-smart-contracts//img/VueDappLogo.png" alt="Smart Contract info"/><h2 class="headerTitleWithLogo">Smart Contract info</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/solidity-smart-contracts/docs/TodoList.html" target="_self">TodoList</a></li><li class=""><a href="/solidity-smart-contracts/en/help.html" target="_self">Help</a></li><li class=""><a href="https://github.com/FriendlyUser/solidity-smart-contracts/" target="_self">Github</a></li><li class="siteNavGroupActive"><a href="/solidity-smart-contracts/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Recent Posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Recent Posts</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/solidity-smart-contracts/blog/2018/09/09/Intro.html">Introduction to Bchain</a></li><li class="navListItem"><a class="navItem" href="/solidity-smart-contracts/blog/2018/09/08/Status-Report.html">Sept Status Report</a></li><li class="navListItem"><a class="navItem" href="/solidity-smart-contracts/blog/2018/08/25/CI-version-1.2.0.html">Travis CI Configured</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/solidity-smart-contracts/blog/2018/09/09/Intro.html">Introduction to Bchain</a></h1><p class="post-meta">September 9, 2018</p><div class="authorBlock"><p class="post-authorName"><a href="http://friendlyuser.github.io" target="_blank" rel="noreferrer noopener">David Li</a></p><div class="authorPhoto"><a href="http://friendlyuser.github.io" target="_blank" rel="noreferrer noopener"><img src="https://graph.facebook.com/661277175/picture/?height=200&amp;width=200" alt="David Li"/></a></div></div></header><div><span><h1><a class="anchor" aria-hidden="true" id="bchain"></a><a href="#bchain" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bchain</h1>
+<p>Three important attributes of blockchain are:</p>
+<ul>
+<li><p><strong>Trust</strong>: Blockchain helps in creating applications that are
+decentralized and collectively owned by multiple people. Nobody
+within this group has the power to change or delete previous
+transactions. Even if someone tries to do so, it will not be
+accepted by other stakeholders.</p></li>
+<li><p><strong>Autonomy</strong> There is no single owner for blockchain-based
+applications. No one controls the blockchain, but everyone
+participates in its activities. This helps in creating solutions
+that cannot be manipulated or induce corruption.</p></li>
+<li><p><strong>Intermediaries</strong> Blockchain-based applications can help remove the
+intermediaries from existing processes. Generally there is a central
+body, such as vehicle registration, license issuing, and so on, that
+acts as registrar for registering vehicles as well as issuing driver
+licenses. Without blockchain-based systems, there is no central body
+and if a license is issued or vehicle is registered after a
+blockchain mining process, that will remain a fact for an epoch
+time-period without the need of any central authority vouching for
+it.</p></li>
+</ul>
+<p>There are the following two types of cryptography in computing:
+Symmetric and Asymmetric</p>
+<h4><a class="anchor" aria-hidden="true" id="types-of-cryptography"></a><a href="#types-of-cryptography" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types of cryptography</h4>
+<p>Symmetric cryptography refers to the process of using a single key for
+both encryption and decryption.</p>
+<p>Asymmetric cryptography refers to the process of using two keys for
+encryption and decryption. Any key can be used for encryption and
+decryption. Message encryption with a public key can be decrypted using
+a private key and messages encrypted by a private key can be decrypted
+using a public key.</p>
+<p>Hashing is the process of transforming any input data into fixed length
+random character data, and it is not possible to regenerate or identify
+the original data from the resultant string data. Hashes are also known
+as fingerprint of input data.</p>
+<h4><a class="anchor" aria-hidden="true" id="what-is-gas"></a><a href="#what-is-gas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is Gas</h4>
+<p>This is also known as gas cost. There is also gas price that can be
+adjusted to a lower price when the price of Ether increases and a higher
+price when the price of Ether decreases.</p>
+<h1><a class="anchor" aria-hidden="true" id="properties-of-ethereum-transactions"></a><a href="#properties-of-ethereum-transactions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties of Ethereum Transactions</h1>
+<p>A transaction has some of the following important properties related to
+it:</p>
+<ul>
+<li><p>The from account property denotes the account that is originating
+the transaction and represents an account that is ready to send some
+gas or Ether. Both gas and Ether concepts were discussed earlier in
+this chapter. The from account can be externally owned or a contract
+account.</p></li>
+<li><p>The to account property refers to an account that is receiving Ether
+or benefits in lieu of an exchange. For transactions related to
+deployment of contract, the to field is empty. It can be externally
+owned or a contract account.</p></li>
+<li><p>The value account property refers to the amount of Ether that is
+transferred from one account to another.</p></li>
+<li><p>The input account property refers to the compiled contract bytecode
+and is used during contract deployment in EVM. It is also used for
+storing data related to smart contract function calls along with its
+parameters. A typical transaction in Ethereum where a contract
+function is invoked is shown here. In the following screenshot,
+notice the input field containing the function call to contract
+along with its parameters:</p>
+<ul>
+<li><p>The blockHash account property refers to the hash of block to
+which this transaction belongs.</p></li>
+<li><p>The blockNumber account property is the block in which this
+transaction belongs.</p></li>
+<li><p>The gas account property refers to the amount of gas supplied by
+the sender who is executing this transaction.</p></li>
+<li><p>The gasPrice account property refers to the price per gas the
+sender was willing to pay</p></li>
+<li><p>The hash account property refers to the hash of the transaction.</p></li>
+<li><p>The nonce account property refers to the number of transactions
+made by the sender prior to the current transaction.</p></li>
+<li><p>The nonce account property refers to the number of transactions
+made by the sender prior to the current transaction.</p></li>
+<li><p>The value account property refers to the amount of Ether
+transferred in wei.</p></li>
+<li><p>The v, r, and s account properties relate to digital signatures
+and the signing of the transaction.</p></li>
+</ul></li>
+</ul>
+<h1><a class="anchor" aria-hidden="true" id="properties-of-ethereum-blocks"></a><a href="#properties-of-ethereum-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties of Ethereum Blocks</h1>
+<ul>
+<li><p>The difficulty property determines the complexity of the
+puzzle/challenge given to miners for this block.</p></li>
+<li><p>The gasLimit property determines the maximum gas allowed. This helps
+in determining how many transactions can be part of the block.</p></li>
+<li><p>The gasUsed property refers to the actual gas used for this block
+for executing all transactions in it.</p></li>
+<li><p>The hash property refers to the hash of the block.</p></li>
+<li><p>The nonce property refers to the number that helps in solving the
+challenge.</p></li>
+<li><p>The miner property is the account identifier of the miner, also
+known as coinbase or etherbase.</p></li>
+<li><p>The number property is the sequential number of this block on the
+chain.</p></li>
+<li><p>The parentHash property refers to the parent block’s hash.</p></li>
+<li><p>The receiptsRoot, stateRoot, and transactionsRoot properties refer
+to Merkle trees discussed during the mining process.</p></li>
+<li><p>The transactions property refers to an array of transactions that
+are part of this block.</p></li>
+<li><p>The difficulty property determines the complexity of the
+puzzle/challenge given to miners for this block.</p></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="mining-protocols"></a><a href="#mining-protocols" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mining Protocols</h4>
+<p><strong>Proof of Work</strong></p>
+<p>(PoW) wherein a miner provides proof that it is has worked on
+computing the final answer that could satisfy as solution to the
+puzzle.</p>
+<p><strong>Proof of Stake (PoS)</strong></p>
+<pre><code class="hljs">concept states that a person can mine or validate block transactions
+according to how many coins he or she holds. The creator of the next
+block is chosen via various combinations of random selection and
+wealth or age (i.e., the stake)
+</code></pre>
+<p>** Proof of Authority (PoA)**</p>
+<p>transactions and blocks are validated by approved accounts, known as
+validators. Validators run software allowing them to put
+transactions in blocks. The process is automated and does not
+require validators to be constantly monitoring their computers. It,
+however, does require maintaining the computer (the authority node)
+uncompromised.</p>
+<p>Proof of Space Time (PoST)</p>
+<p>apparently able to run on any computer without expensive hardware. A
+PoST allows a prover to convince a verifier that she spent a
+“space-time” resource (storing data space over a period of time)
+<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<p>Geth allows connectivity to JSON RPC using the following three different
+protocols:</p>
+<ul>
+<li><p>Inter Process Communication (IPC): This protocol is used for inter
+process communication generally used within the same computer.</p></li>
+<li><p>Remote Procedure Calls (RPC): This protocol is used for inter
+process communication across computers. This is generally based on
+TCP and HTTP protocol.</p></li>
+<li><p>Web Sockets (WS): This protocol is used to connect to Geth using
+sockets.</p></li>
+</ul>
+<table>
+<thead>
+<tr><th>Variable Name</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>block.blockhash(uint blockNumber) returns (bytes32)</td><td>hash of the given block - only works for 256 most recent, excluding current, blocks - deprecated in version 0.4.22 and replaced by blockhash(uint blockNumber).</td></tr>
+<tr><td>block.coinbase (address)</td><td>current block miner’s address</td></tr>
+<tr><td>block.difficulty (uint):</td><td>current block difficulty</td></tr>
+<tr><td>block.gaslimit (uint)</td><td>current block gaslimit</td></tr>
+<tr><td>block.number (uint)</td><td>current block number</td></tr>
+<tr><td>block.timestamp (uint)</td><td>current block timestamp as seconds since unix epoch</td></tr>
+<tr><td>gasleft() returns (uint256)</td><td>remaining gas</td></tr>
+<tr><td>msg.data (bytes)</td><td>complete calldata</td></tr>
+<tr><td>msg.gas (uint) to be gasLeft()</td><td>remaining gas - deprecated in version</td></tr>
+<tr><td>msg.sender (address)</td><td>sender of the message (current call)</td></tr>
+<tr><td>msg.sig (bytes4)</td><td>first four bytes of the calldata (i.e. function identifier)</td></tr>
+<tr><td>msg.value (uint)</td><td>number of wei sent with the message</td></tr>
+<tr><td>now (uint)</td><td>current block timestamp (alias for block.timestamp)</td></tr>
+<tr><td>tx.gasprice (uint)</td><td>gas price of the transaction</td></tr>
+<tr><td>tx.origin (address)</td><td>sender of the transaction (full call chain)</td></tr>
+</tbody>
+</table>
+<p>In solidity, there are a few ground rules for a library contract, which
+differentiates it from a normal contract. These are:</p>
+<ul>
+<li><p>A library cannot have a state variable</p></li>
+<li><p>A library cannot inherit or be inherited</p></li>
+<li><p>A library cannot receive ether.</p></li>
+</ul>
+<p>Solidity is a work-in-progress yet well-documented language, being
+gradually developed as users face various problems while implementing
+smart contracts on the blockchain.</p>
+<h4><a class="anchor" aria-hidden="true" id="token-vs-coin"></a><a href="#token-vs-coin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Token vs Coin</h4>
+<p>In simple words, the following three points summarize the difference
+between coins and tokens:</p>
+<ul>
+<li><p>Coins are separate currencies on their own blockchain, while tokens
+are mainly based on a single blockchain variant</p></li>
+<li><p>Coins generally have a limited functionality, store-of-value, while
+tokens can store a complex, multi-faceted level of values.</p></li>
+<li><p>Coins are mostly generated by mining a blockchain, while tokens are
+generated by executing smart contracts on the blockchain.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="ponzi-scheme"></a><a href="#ponzi-scheme" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ponzi Scheme</h2>
+<ul>
+<li><p>Array based pyramid scheme</p>
+<ul>
+<li><p>An early adopter in this scheme can redeem their multiplied
+investement when enough money is gathered from the useres who
+alter on join the scheme.</p></li>
+<li><p>The last user must wait until all the users before her have
+redeemed their share</p></li>
+</ul></li>
+<li><p>Tree based pyramid scheme</p>
+<ul>
+<li><p>Each user has a parent, called inviter, expect the root node,
+which is the contract owner</p></li>
+<li><p>Whenever a user joins the scheme, their money is split among its
+ancestors</p></li>
+<li><p>An user cannot foresee how much they will gain</p></li>
+</ul></li>
+<li><p>Handover schemes</p>
+<ul>
+<li><p>Store only the address of the last user.</p></li>
+<li><p>If someone wants to join, she must repay the last user of her
+investment plus a fixed interest.</p></li>
+</ul></li>
+<li><p>Waterfall schemes</p>
+<ul>
+<li><p>Each new investment gets divided among the already-joined users,
+starting from the first one.</p></li>
+<li><p>Each user receives a fixed percentage of what they have
+invested, as far as there is enough money.</p></li>
+</ul></li>
+</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1"  class="footnote-item"><p>For PoST, see <a href="https://eprint.iacr.org/2016/035.pdf">https://eprint.iacr.org/2016/035.pdf</a> <a href="#fnref1" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/solidity-smart-contracts/blog">Recent Posts</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ponzi-scheme">Ponzi Scheme</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/solidity-smart-contracts/" class="nav-home"><img src="/solidity-smart-contracts//img/VueDappLogo.png" alt="Smart Contract info" width="66" height="66"/></a><div><h5>Docs</h5><a href="/solidity-smart-contracts/docs/en/Migrations.html">Getting Started (or other categories)</a><a href="/solidity-smart-contracts/docs/en/TodoList.html">Guides (or other categories)</a><a href="/solidity-smart-contracts/docs/en/Users.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/solidity-smart-contracts/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/solidity-smart-contracts/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/FriendlyUser/solidity-smart-contracts/" data-icon="octicon-star" data-count-href="/FriendlyUser/Vue-Dapp/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 David Li</section></footer></div></body></html>
