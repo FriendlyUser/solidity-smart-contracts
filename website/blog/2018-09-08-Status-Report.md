@@ -189,3 +189,10 @@ calling external contracts. A race condition can occur when any unknown
 state change occurs in an external function call. A re-entrancy attack is one
 form of race condition. Another form of race condition can occur if two
 contracts are both modifying the same variable in a third contract. 
+
+# I love IPFS
+
+### IPFS 
+
+* https://ipfs.github.io/public-gateway-checker/
+* https://medium.com/coinmonks/step-by-step-approach-to-create-dapp-using-ethereum-reactjs-ipfs-part-1-42ea4cf69488

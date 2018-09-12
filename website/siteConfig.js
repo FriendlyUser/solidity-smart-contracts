@@ -21,16 +21,16 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Vue Dapp info' /* title for your website */,
-  tagline: 'Documentation for my Dapp',
+  title: 'Smart Contract info' /* title for your website */,
+  tagline: 'Documentation for my smart contracts of Interest',
   url: 'https://friendlyuser.github.io/' /* your website url */,
-  baseUrl: '/Vue-Dapp/' /* base url for your project */,
+  baseUrl: '/solidity-smart-contracts/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'vue-dapp',
+  projectName: 'solidity-smart-contracts',
   organizationName: 'David Li',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
@@ -38,12 +38,11 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'Migrations', label: 'Docs'},
+    {doc: 'TodoList', label: 'TodoList'},
     {page: "help", label: "Help" },
     // Links to href destination
-    {doc: "TodoList.md", label: "TodoList Component" },
     // Links to href destination
-    { href: "https://github.com/FriendlyUser/Vue-Dapp/", label: "Github" },
+    { href: "https://github.com/FriendlyUser/solidity-smart-contracts/", label: "Github" },
     {blog: true, label: 'Blog'},
   ],
 
@@ -101,7 +100,7 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  repoUrl: 'https://github.com/FriendlyUser/Vue-Dapp/',
+  repoUrl: 'https://github.com/FriendlyUser/solidity-smart-contracts/',
 };
 
 module.exports = siteConfig;
