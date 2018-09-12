@@ -48,7 +48,7 @@ contract SatoshiDice {
             msg.sender.transfer(payout);
         }
 
-        Roll(id, rolled);
+        emit Roll(id, rolled);
         delete bets[id];
     }
 

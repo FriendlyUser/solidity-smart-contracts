@@ -46,7 +46,7 @@ contract PredictionMarket {
 
         counter++;
         orders[counter] = Order(msg.sender, OrderType.Buy, amount, price);
-        OrderPlaced(counter, msg.sender, OrderType.Buy, amount, price);
+        emit OrderPlaced(counter, msg.sender, OrderType.Buy, amount, price);
     }
 
     function orderSell (uint price, uint amount) public {
@@ -59,7 +59,7 @@ contract PredictionMarket {
 
         counter++;
         orders[counter] = Order(msg.sender, OrderType.Sell, amount, price);
-        OrderPlaced(counter, msg.sender, OrderType.Sell, amount, price);
+        emit OrderPlaced(counter, msg.sender, OrderType.Sell, amount, price);
     }
 
     function tradeBuy (uint orderId) public payable {
@@ -113,7 +113,7 @@ contract PredictionMarket {
         if (order.amount == 0) 
             delete orders[orderId];
 
-        TradeMatched(orderId, msg.sender, amount);
+        emit TradeMatched(orderId, msg.sender, amount);
     }
 
     function cancelOrder (uint orderId) public {
@@ -127,7 +127,7 @@ contract PredictionMarket {
             shares[msg.sender] += order.amount;
 
         delete orders[orderId];
-        OrderCanceled(orderId);
+        emit OrderCanceled(orderId);
     }
 
     function resolve (bool _result) public {
@@ -150,7 +150,7 @@ contract PredictionMarket {
         }
 
         msg.sender.transfer(payout);
-        Payout(msg.sender, payout);
+        emit Payout(msg.sender, payout);
     }
 
 }
