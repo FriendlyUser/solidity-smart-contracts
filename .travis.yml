@@ -8,7 +8,9 @@ script:
   - sudo apt-get update
   - sudo apt-get -y install 
   - rm -rf contracts/games/Powerball.sol
-  - solidity-docgen /home/travis/build/FriendlyUser/solidity-smart-contracts /home/travis/build/FriendlyUser/solidity-smart-contracts/contracts /home/travis/build/FriendlyUser/solidity-smart-contracts  
+  - solidity-docgen /home/travis/build/FriendlyUser/solidity-smart-contracts /home/travis/build/FriendlyUser/solidity-smart-contracts/contracts /home/travis/build/FriendlyUser/solidity-smart-contracts
+  - rm -rf contracts/games
+  - solidity-docgen /home/travis/build/FriendlyUser/solidity-smart-contracts /home/travis/build/FriendlyUser/solidity-smart-contracts/contracts /home/travis/build/FriendlyUser/solidity-smart-contracts
   - cd website
   - npm install
   - npm run build
