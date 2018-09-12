@@ -7,8 +7,9 @@ script:
   - sudo add-apt-repository -y ppa:ethereum/ethereum
   - sudo apt-get update
   - sudo apt-get -y install 
-  - mv contracts/games/Powerball.sol mv contracts/games/Powerball.test
+  - rm -rf contracts/games/Powerball.sol
   - solidity-docgen /home/travis/build/FriendlyUser/solidity-smart-contracts /home/travis/build/FriendlyUser/solidity-smart-contracts/contracts /home/travis/build/FriendlyUser/solidity-smart-contracts  
+  - cd website
   - npm install
   - npm run build
   - cd ../
