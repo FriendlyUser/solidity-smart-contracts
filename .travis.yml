@@ -8,6 +8,14 @@ script:
   - sudo apt-get update
   - sudo apt-get -y install solc
   - solidity-docgen /home/travis/build/FriendlyUser/solidity-smart-contracts /home/travis/build/FriendlyUser/solidity-smart-contracts/contracts /home/travis/build/FriendlyUser/solidity-smart-contracts 
+  - rm -rf contracts/schemes
+  - solidity-docgen /home/travis/build/FriendlyUser/solidity-smart-contracts /home/travis/build/FriendlyUser/solidity-smart-contracts/contracts /home/travis/build/FriendlyUser/solidity-smart-contracts 
+  - rm -rf contracts/games
+  - solidity-docgen /home/travis/build/FriendlyUser/solidity-smart-contracts /home/travis/build/FriendlyUser/solidity-smart-contracts/contracts /home/travis/build/FriendlyUser/solidity-smart-contracts 
+  - rm -rf contracts/tokens
+  - solidity-docgen /home/travis/build/FriendlyUser/solidity-smart-contracts /home/travis/build/FriendlyUser/solidity-smart-contracts/contracts /home/travis/build/FriendlyUser/solidity-smart-contracts 
+  - rm -rf contracts/util
+  - solidity-docgen /home/travis/build/FriendlyUser/solidity-smart-contracts /home/travis/build/FriendlyUser/solidity-smart-contracts/contracts /home/travis/build/FriendlyUser/solidity-smart-contracts 
   - cd website
   - npm install
   - npm run build

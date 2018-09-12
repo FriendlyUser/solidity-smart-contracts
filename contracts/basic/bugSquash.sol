@@ -1,3 +1,4 @@
+/// @title BugSquash
 contract BugSquash {
  enum State { Alive, Squashed }
  State state;
