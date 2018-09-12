@@ -1,0 +1,14 @@
+{
+  "components": {
+    "First Category": ["TodoList.md", "Footer.md", "Dashboard.md", "HelloMetamask.md","MetamaskState.md","Signup.md"]
+  },
+  "Application": {
+    "App Files": ["App","main","users"],
+    "Components": ["Dashboard","Signup"],
+    "Router": ["index"]
+  },
+  "Contracts": {
+    "Users": ["sm-Users"],
+    "Migrations": ["sm-Migrations"]
+  }
+}

@@ -32,7 +32,10 @@ module.exports = {
       '/contracts/': genSideBarConfigFolder('/contracts/'),
       '/notes/': [
         '',
-        'IntroBchain'
+        'IntroBchain',
+        'IPFS',
+        'Solidity',
+        'ContinuousIntegration'
       ],      /* /notes/ */
       // fallback
       '/': [

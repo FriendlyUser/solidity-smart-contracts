@@ -1,3 +1,5 @@
+# Solidity
+
 ## Solidity Notes 
 
 Solidity receives many comparisons to JavaScript, but its closest

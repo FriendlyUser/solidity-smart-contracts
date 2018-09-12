@@ -1,30 +1,25 @@
+sudo: required
 language: node_js
 node_js:
-    - "10"
-env:
-    - CXX=g++-4.8
-addons:
-    apt:
-        sources:
-            - ubuntu-toolchain-r-test
-        packages:
-            - g++-4.8
-install:
-    - npm install
+  - "8"
 script:
-    - npm run docs:build
-cache:
-    directories:
-        - "node_modules"
-notifications:
-    email: false
+  - sudo add-apt-repository -y ppa:ethereum/ethereum
+  - sudo apt-get update
+  - sudo apt-get -y install solc
+  - solidity-docgen /home/travis/build/FriendlyUser/solidity-smart-contracts /home/travis/build/FriendlyUser/solidity-smart-contracts/contracts /home/travis/build/FriendlyUser/solidity-smart-contracts 
+  - cd website
+  - npm install
+  - npm run build
+  - cd ../
+  - mv docs mddocs
+  - mv mddocs website/build/solidity-smart-contracts
 deploy:
-    provider: pages
-    skip-cleanup: true
-    local_dir: docs/.vuepress/dist
-    github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-    repo: FriendlyUser/solidity-smart-contracts
-    keep-history: true
-    target-branch: gh-pages
-    on:
-        branch: master
+  provider: pages
+  skip-cleanup: true
+  local_dir: website/build/solidity-smart-contracts  # or remove this line to upload from root of repo
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: master
+#after_script:
+#  - npm run coverage && cat coverage/lcov.info | coveralls
