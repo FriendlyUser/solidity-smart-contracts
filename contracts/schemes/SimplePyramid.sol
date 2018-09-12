@@ -32,5 +32,6 @@ contract SimplePyramid {
          balances[address(this)] = 0;
          depth += 1;
          investors.length += 2**depth;
- }
+    }
+  }
 }
