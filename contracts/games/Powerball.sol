@@ -1,4 +1,4 @@
-
+/// @title Powerball contract
 contract Powerball {
     struct Round {
         uint endTime;
@@ -15,7 +15,7 @@ contract Powerball {
     uint public round;
     mapping(uint => Round) public rounds;
 
-    function Powerball () public {
+    constructor Powerball () public {
         round = 1;
         rounds[round].endTime = now + ROUND_LENGTH;
     }
