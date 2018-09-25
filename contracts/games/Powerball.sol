@@ -1,3 +1,4 @@
+pragma solidity ^0.4.18;
 /// @title Powerball contract
 contract Powerball {
     struct Round {

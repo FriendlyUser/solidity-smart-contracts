@@ -16,3 +16,8 @@ To generate markdown documentation make sure [soldoc](https://github.com/dev-mat
 ```sh
 soldoc -o ./docs/contracts --log ./docs/contracts/Soldoc.md
 ```
+
+
+### References
+
+* https://github.com/aunyks/vitruvius
