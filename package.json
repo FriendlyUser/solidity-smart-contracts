@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "index.js",
   "description": "List of smart contracts in Solidity.",
-  "repository": "https://github.com/FriendlyUser/solidity-smart-contracts.git",
+  "repository": "https://github.com/FriendlyUser/solidity-smart-contracts/",
   "author": "FriendlyUser <pandabeareee@gmail.com>",
   "license": "MIT",
   "keywords": [
