@@ -1,0 +1,6 @@
+---
+id: basic_Contract_Factory
+title: Factory
+---
+
+<div class="contract-doc"><div class="contract"><h2 class="contract-header"><span class="contract-kind">contract</span> Factory</h2><div class="source">Source: <a href="https://github.com/FriendlyUser/solidity-smart-contracts.git//blob/v0.1.0/contracts/basic/Contract.sol" target="_blank">basic/Contract.sol</a></div></div><div class="index"><h2>Index</h2><ul><li><a href="basic_Contract_Factory.html#make">make</a></li><li><a href="basic_Contract_Factory.html#set">set</a></li></ul></div><div class="reference"><h2>Reference</h2><div class="functions"><h3>Functions</h3><ul><li><div class="item function"><span id="make" class="anchor-marker"></span><h4 class="name">make</h4><div class="body"><code class="signature">function <strong>make</strong><span>() </span><span>public </span><span>returns  (address) </span></code><hr/><dl><dt><span class="label-return">Returns:</span></dt><dd>address</dd></dl></div></div></li><li><div class="item function"><span id="set" class="anchor-marker"></span><h4 class="name">set</h4><div class="body"><code class="signature">function <strong>set</strong><span>(uint[] _amounts) </span><span>public </span></code><hr/><dl><dt><span class="label-parameters">Parameters:</span></dt><dd><div><code>_amounts</code> - uint[]</div></dd></dl></div></div></li></ul></div></div></div>
