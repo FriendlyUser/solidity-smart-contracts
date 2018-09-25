@@ -22,3 +22,5 @@ soldoc -o ./docs/contracts --log ./docs/contracts/Soldoc.md
 ### References
 
 * https://github.com/aunyks/vitruvius
+* https://github.com/PruthviKumarBK/Decentralized_eCom
+* https://github.com/woodydeck/What-Does-Nadia-Think
