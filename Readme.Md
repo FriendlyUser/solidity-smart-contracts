@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/FriendlyUser/solidity-smart-contracts.svg?branch=master)](https://travis-ci.org/FriendlyUser/solidity-smart-contracts)
 # Solidity-smart contracts
 
 Since the solidity programming language is used in multiple blockchain platform including
