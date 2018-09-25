@@ -38,6 +38,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
+    {doc: 'Users', label: 'Contracts'},
     {doc: 'TodoList', label: 'TodoList'},
     {page: "help", label: "Help" },
     // Links to href destination
@@ -56,8 +57,8 @@ const siteConfig = {
 
   /* colors for website */
   colors: {
-    primaryColor: '#483D8B',
-    secondaryColor: '#205C3B',
+    primaryColor: '#893A86',
+    secondaryColor: '#95BB76',
   },
 
   /* custom fonts for website */
