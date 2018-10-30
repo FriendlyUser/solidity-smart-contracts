@@ -38,19 +38,19 @@ a bridge than building a web site. The process is not iterative.</p>
 untested code. Contracts should be thoroughly tested and vetted before
 being deployed to the mainnet.</p>
 <pre><code class="hljs css language-solidity">pragma solidity ^<span class="hljs-number">0.4</span><span class="hljs-number">.15</span>;
-contract <span class="hljs-title">HelloWorld</span> {
- address owner;
- <span class="hljs-built_in">string</span> greeting = <span class="hljs-string">"Hello World"</span>;
- <span class="hljs-comment">// Constructor function</span>
- <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">HelloWorld</span> (<span class="hljs-params"></span>) <span class="hljs-title">public</span> </span>{
+contract HelloWorld {
+ address <span class="hljs-keyword">owner</span>;
+ string greeting = "Hello World";
+ // Constructor <span class="hljs-keyword">function</span>
+ <span class="hljs-keyword">function</span> HelloWorld () <span class="hljs-built_in">public</span> {
  owner = msg.sender;
  }
- <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">greet</span> (<span class="hljs-params"></span>) <span class="hljs-title">constant</span> <span class="hljs-title">public</span> <span class="hljs-title">returns</span> (<span class="hljs-params">string</span>) </span>{
+ <span class="hljs-keyword">function</span> greet () <span class="hljs-keyword">constant</span> <span class="hljs-built_in">public</span> <span class="hljs-keyword">returns</span> (string) {
  <span class="hljs-keyword">return</span> greeting; 
  }
- <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">kill</span> (<span class="hljs-params"></span>) <span class="hljs-title">public</span> </span>{
- <span class="hljs-built_in">require</span>(owner == msg.sender);
- selfdestruct(owner);
+ <span class="hljs-keyword">function</span> kill () <span class="hljs-built_in">public</span> {
+ require(owner == msg.sender);
+ selfdestruct(<span class="hljs-keyword">owner</span>);
  }
 }
 </code></pre>
