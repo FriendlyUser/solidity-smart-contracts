@@ -1,6 +1,6 @@
 {
   "name": "solidity-smart-contracts",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "index.js",
   "description": "List of smart contracts in Solidity.",
   "repository": "https://github.com/FriendlyUser/solidity-smart-contracts/",
