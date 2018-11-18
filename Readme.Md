@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/FriendlyUser/solidity-smart-contracts.svg?branch=master)](https://travis-ci.org/FriendlyUser/solidity-smart-contracts)
+[![Build Status](https://travis-ci.org/FriendlyUser/solidity-smart-contracts.svg?branch=master)](https://travis-ci.org/FriendlyUser/solidity-smart-contracts) [![DOI](https://zenodo.org/badge/143545024.svg)](https://zenodo.org/badge/latestdoi/143545024)
 # Solidity-smart contracts
 
 Since the solidity programming language is used in multiple blockchain platform including
