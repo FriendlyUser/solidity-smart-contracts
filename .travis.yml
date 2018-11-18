@@ -10,7 +10,7 @@ script:
   - ls
   - cd ../
   - ls
-  - SOLC_PATH="$TRAVIS_BUILD_DIR/solc/solc.exe"
+  - SOLC_PATH="$TRAVIS_BUILD_DIR/solc"
   - set | grep SOLC_PATH
   - export SOLC_PATH=$SOLC_PATH
   - printenv | grep SOLC_PATH
