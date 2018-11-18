@@ -3,12 +3,14 @@ language: node_js
 node_js:
   - "8"
 script:
-  - npm install -g solidity-docgen
   - chmod a+x downloadBinary.sh
   - ./downloadBinary.sh
   - unzip solidity-ubuntu-trusty.zip
+  - cd solc
   - ls
-  - SOLC_PATH="$TRAVIS_BUILD_DIR/solc/"
+  - cd ../
+  - ls
+  - SOLC_PATH="$TRAVIS_BUILD_DIR/solc/solc.exe"
   - set | grep SOLC_PATH
   - export SOLC_PATH=$SOLC_PATH
   - printenv | grep SOLC_PATH
@@ -19,6 +21,7 @@ script:
   # - sudo apt-get -y install solc
   # - sudo apt-get -y install solc
   - rm -rf contracts/games/Powerball.sol
+  - npm install -g solidity-docgen
   - solidity-docgen /home/travis/build/FriendlyUser/solidity-smart-contracts /home/travis/build/FriendlyUser/solidity-smart-contracts/contracts /home/travis/build/FriendlyUser/solidity-smart-contracts
   - cd website
   - npm install
