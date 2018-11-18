@@ -47,7 +47,7 @@ contract OraclizeI {
     function getPrice(string _datasource, uint gaslimit) public returns (uint _dsprice);
     function setProofType(byte _proofType) external;
     function setCustomGasPrice(uint _gasPrice) external;
-    function randomDS_getSessionPubKeyHash() external constant returns(bytes32);
+    function randomDS_getSessionPubKeyHash() external view returns(bytes32);
 }
 
 contract OraclizeAddrResolverI {
@@ -762,7 +762,7 @@ contract usingOraclize {
         return oraclize.randomDS_getSessionPubKeyHash();
     }
 
-    function getCodeSize(address _addr) constant internal returns(uint _size) {
+    function getCodeSize(address _addr) view internal returns(uint _size) {
         assembly {
             _size := extcodesize(_addr)
         }
@@ -2608,7 +2608,7 @@ contract PowerEtherHelper is PowerEtherBase {
 
     function getPendingTransactions(address playerAddress) 
         public 
-        constant 
+        view 
         returns (uint256) {
             
             return playerFundsToWithdraw[playerAddress];

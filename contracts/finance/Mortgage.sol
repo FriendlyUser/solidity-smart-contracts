@@ -28,15 +28,15 @@ contract Mortgage {
     mortgageMap[msg.sender].push(document);
   }
 
-  function getMortgageCount(address person) constant returns(uint) {
+  function getMortgageCount(address person) view returns(uint) {
     return mortgageMap[person].length;
   }
 
-  function getOwnerCount(bytes32 hash) constant returns(uint) {
+  function getOwnerCount(bytes32 hash) view returns(uint) {
     return ownerMap[hash].length;
   }
   
-  function getOwnerByPosition(bytes32 hash,uint index) constant returns(address) {
+  function getOwnerByPosition(bytes32 hash,uint index) view returns(address) {
     return ownerMap[hash][index];
   }
   

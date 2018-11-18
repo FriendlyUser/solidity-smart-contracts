@@ -30,7 +30,7 @@ contract HelloWorld {
  function HelloWorld () public {
  owner = msg.sender;
  }
- function greet () constant public returns (string) {
+ function greet () view public returns (string) {
  return greeting; 
  }
  function kill () public {
