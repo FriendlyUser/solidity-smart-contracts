@@ -46,7 +46,7 @@ contract CrowdBank {
         owner = msg.sender;
     }
 
-    function hasActiveLoan(address borrower) constant returns(bool) {
+    function hasActiveLoan(address borrower) view returns(bool) {
         uint validLoans = loanMap[borrower].length;
         if(validLoans == 0) return false;
         Loan obj = loanList[loanMap[borrower][validLoans-1]];
@@ -71,7 +71,7 @@ contract CrowdBank {
         loanList[loanId].proposal[loanList[loanId].proposalCount-1] = proposalList.length-1;
     }
 
-    function getActiveLoanId(address borrower) constant returns(uint) {
+    function getActiveLoanId(address borrower) view returns(uint) {
         uint numLoans = loanMap[borrower].length;
         if(numLoans == 0) return (2**64 - 1);
         uint lastLoanId = loanMap[borrower][numLoans-1];
@@ -126,7 +126,7 @@ contract CrowdBank {
     }
     
     //Amount to be Repaid
-    function getRepayValue(uint loanId) constant returns(uint) {
+    function getRepayValue(uint loanId) view returns(uint) {
         if(loanList[loanId].state == LoanState.LOCKED)
         {
           uint time = loanList[loanId].startDate;
@@ -197,45 +197,45 @@ contract CrowdBank {
         }
     }
 
-    function totalProposalsBy(address lender) constant returns(uint) {
+    function totalProposalsBy(address lender) view returns(uint) {
         return lendMap[lender].length;
     }
 
-    function getProposalAtPosFor(address lender, uint pos) constant returns(address, uint, ProposalState, uint, uint, uint, uint, bytes32) {
+    function getProposalAtPosFor(address lender, uint pos) view returns(address, uint, ProposalState, uint, uint, uint, uint, bytes32) {
         Proposal prop = proposalList[lendMap[lender][pos]];
         return (prop.lender, prop.loanId, prop.state, prop.rate, prop.amount, loanList[prop.loanId].amount, loanList[prop.loanId].dueDate, loanList[prop.loanId].mortgage);
     }
 
 // BORROWER ACTIONS AVAILABLE    
 
-    function totalLoansBy(address borrower) constant returns(uint) {
+    function totalLoansBy(address borrower) view returns(uint) {
         return loanMap[borrower].length;
     }
 
-    function getLoanDetailsByAddressPosition(address borrower, uint pos) constant returns(LoanState, uint, uint, uint, uint,bytes32) {
+    function getLoanDetailsByAddressPosition(address borrower, uint pos) view returns(LoanState, uint, uint, uint, uint,bytes32) {
         Loan obj = loanList[loanMap[borrower][pos]];
         return (obj.state, obj.dueDate, obj.amount, obj.collected, loanMap[borrower][pos], obj.mortgage);
     }
 
-    function getLastLoanState(address borrower) constant returns(LoanState) {
+    function getLastLoanState(address borrower) view returns(LoanState) {
         uint loanLength = loanMap[borrower].length;
         if(loanLength == 0)
             return LoanState.SUCCESSFUL;
         return loanList[loanMap[borrower][loanLength -1]].state;
     }
 
-    function getLastLoanDetails(address borrower) constant returns(LoanState, uint, uint, uint, uint) {
+    function getLastLoanDetails(address borrower) view returns(LoanState, uint, uint, uint, uint) {
         uint loanLength = loanMap[borrower].length;
         Loan obj = loanList[loanMap[borrower][loanLength -1]];
         return (obj.state, obj.dueDate, obj.amount, obj.proposalCount, obj.collected);
     }
 
-    function getProposalDetailsByLoanIdPosition(uint loanId, uint numI) constant returns(ProposalState, uint, uint, uint, address) {
+    function getProposalDetailsByLoanIdPosition(uint loanId, uint numI) view returns(ProposalState, uint, uint, uint, address) {
         Proposal obj = proposalList[loanList[loanId].proposal[numI]];
         return (obj.state, obj.rate, obj.amount, loanList[loanId].proposal[numI],obj.lender);
     }
 
-    function numTotalLoans() constant returns(uint) {
+    function numTotalLoans() view returns(uint) {
         return loanList.length;
     }
     

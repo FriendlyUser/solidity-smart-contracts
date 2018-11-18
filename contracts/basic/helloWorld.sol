@@ -10,7 +10,7 @@ contract HelloWorld {
  }
  
  /// @dev return hello world greeting 
- function greet () constant public returns (string) {
+ function greet () view public returns (string) {
  return greeting; 
  }
  /// @dev only the owner can destroy the contract
