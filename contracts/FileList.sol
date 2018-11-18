@@ -32,7 +32,7 @@ contract FileList {
    /// @param _filename name of file as a bytes32 as filenames should be short
    /// @param tags array of bytes32 used for sorting/searching files (e,g. blockchain, school, textbook)
    /// @notice updates mappings todos and lastIds
-   function addFile(string ipfshash, bytes32 _filename, bytes32[5] tags) public {
+   function addFile(string ipfshash, bytes32 _filename, bytes32[5] memory tags) public {
  
       File memory myFile = File(lastIds[msg.sender], ipfshash, _filename, tags,  msg.sender, now);
       // store new file in mapping
@@ -47,7 +47,7 @@ contract FileList {
    /// @dev return the tags for a specific file 
    /// @param owner --- address of person who uploaded the file 
    /// @param _index --- the file desired, (first file uploaded, second , etc ...)
-   function getFileTags(address owner, uint256 _index) external view returns (bytes32[5]) {
+   function getFileTags(address owner, uint256 _index) external view returns (bytes32 memory [5]) {
        return files[owner][_index].tags;
   }
 }
