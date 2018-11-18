@@ -59,7 +59,7 @@ contract BasicToken {
   // define function called "balanceOf"
   // inputs? (parameters) the address of the owner (account)
   // ontputs? (returns) the balance (number)
-  function balanceOf(address account) public constant returns (uint256) {
+  function balanceOf(address account) public view returns (uint256) {
 
     // balances[account] -> return the balance of the owner
     return balances[account];
