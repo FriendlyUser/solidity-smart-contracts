@@ -32,7 +32,7 @@ contract FileList {
    /// @param _filename name of file as a bytes32 as filenames should be short
    /// @param tags array of bytes32 used for sorting/searching files (e,g. blockchain, school, textbook)
    /// @notice updates mappings todos and lastIds
-   function addFile(string ipfshash, bytes32 _filename, bytes32[5] memory tags) public {
+   function addFile(string memory ipfshash, bytes32 memory _filename, bytes32[5] memory tags) public {
  
       File memory myFile = File(lastIds[msg.sender], ipfshash, _filename, tags,  msg.sender, now);
       // store new file in mapping
