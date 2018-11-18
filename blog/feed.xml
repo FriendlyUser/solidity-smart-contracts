@@ -4,7 +4,7 @@
         <title>Smart Contract info Blog</title>
         <link>https://friendlyuser.github.io//solidity-smart-contracts/blog</link>
         <description>The best place to stay up-to-date with the latest Smart Contract info news and events.</description>
-        <lastBuildDate>Sun, 09 Sep 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 12 Nov 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,13 @@
             <link>https://friendlyuser.github.io//solidity-smart-contracts/blog</link>
         </image>
         <copyright>Copyright © 2018 David Li</copyright>
+        <item>
+            <title><![CDATA[Fixing Build Pipeline]]></title>
+            <link>https://friendlyuser.github.io//solidity-smart-contracts/blog/2018/11/12/Fixing-pipeline-2018-11-18.html</link>
+            <guid>https://friendlyuser.github.io//solidity-smart-contracts/blog/2018/11/12/Fixing-pipeline-2018-11-18.html</guid>
+            <pubDate>Mon, 12 Nov 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="solidity-docgen-travis-ci-issues"></a><a href="#solidity-docgen-travis-ci-issues" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Solidity-docgen travis CI issues</h1> <p>Since the solc package was updated to version 5.0, and ppa eliminate previous versions, I found myself needed to install an old version.</p> <p>What I ended up doing is manually downloading the binary using wget and then lin...</p>]]></description>
+        </item>
         <item>
             <title><![CDATA[Introduction to Bchain]]></title>
             <link>https://friendlyuser.github.io//solidity-smart-contracts/blog/2018/09/09/Intro.html</link>
