@@ -7,6 +7,7 @@ script:
   - sudo add-apt-repository -y ppa:ethereum/ethereum
   - sudo apt-get update
   - sudo apt-get -y install solc
+  # - sudo apt-get -y install solc=0.4.24
   - rm -rf contracts/games/Powerball.sol
   - solidity-docgen /home/travis/build/FriendlyUser/solidity-smart-contracts /home/travis/build/FriendlyUser/solidity-smart-contracts/contracts /home/travis/build/FriendlyUser/solidity-smart-contracts
   - cd website
