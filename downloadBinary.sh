@@ -9,7 +9,7 @@ GIT_USER=ethereum
 GIT_PROJECT=solidity
 BASE_URL=https://github.com/$GIT_USER/$GIT_PROJECT/releases/download
 RELEASE=v0.4.24
-BINARY=solidity-ubuntu-trusty.zip
+BINARY=solc-static-linux
 
 if [[ -e $BINARY ]]
 then
@@ -28,6 +28,6 @@ fi
 
 set -e
 echo "Fetching from: $URL"
-wget --quiet --output-document /usr/local/bin/solc "$URL/solc-static-linux"
+wget --quiet --output-document /usr/local/bin/solc "$URL"
 # file $BINARY
 chmod a+x /usr/local/bin/solc
