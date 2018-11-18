@@ -28,6 +28,6 @@ fi
 
 set -e
 echo "Fetching from: $URL"
-wget --quiet --output-document /usr/local/bin/solc "$URL"
+sudo wget --quiet --output-document /usr/local/bin/solc "$URL"
 # file $BINARY
-chmod a+x /usr/local/bin/solc
+sudo chmod a+x /usr/local/bin/solc
