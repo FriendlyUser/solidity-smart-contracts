@@ -8,7 +8,7 @@
 GIT_USER=ethereum
 GIT_PROJECT=solidity
 BASE_URL=https://github.com/$GIT_USER/$GIT_PROJECT/releases/download
-RELEASE=v0.4.24
+RELEASE=v0.4.25
 BINARY=solc-static-linux
 
 if [[ -e $BINARY ]]
