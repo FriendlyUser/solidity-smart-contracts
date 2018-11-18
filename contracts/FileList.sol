@@ -47,7 +47,7 @@ contract FileList {
    /// @dev return the tags for a specific file 
    /// @param owner --- address of person who uploaded the file 
    /// @param _index --- the file desired, (first file uploaded, second , etc ...)
-   function getFileTags(address owner, uint256 _index) external view returns (bytes32 memory [5]) {
+   function getFileTags(address owner, uint256 _index) external view returns (bytes32[5] memory) {
        return files[owner][_index].tags;
   }
 }
