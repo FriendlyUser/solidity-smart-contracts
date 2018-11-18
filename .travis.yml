@@ -8,7 +8,7 @@ script:
   - ./downloadBinary.sh
   - unzip solidity-ubuntu-trusty.zip
   - ls
-  - export PATH="$PATH:/$TRAVIS_BUILD_DIR/solidity-ubuntu-trusty/"
+  - export PATH="$PATH:/$TRAVIS_BUILD_DIR/solc/"
   - source ~/.profile 
   # - sudo add-apt-repository -y ppa:ethereum/ethereum
   # - sudo apt-get update
