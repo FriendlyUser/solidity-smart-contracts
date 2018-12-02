@@ -8,6 +8,9 @@ Since the solidity programming language is used in multiple blockchain platform 
 
 learning solidity is invaluable as blockchain technologies and smart contracts will be eseential in the future.
 
+**Disclaimer** Getting contracts to compile on solidity *4.2x and 5 is quite difficult in addition to the rapid changes to the openzeppelin framework.
+
+I think I'll end up flattener all open zeppelin contracts just to be save in the future and may rely on other ways to generic solidity documentation.
 
 ## Documentation
 
