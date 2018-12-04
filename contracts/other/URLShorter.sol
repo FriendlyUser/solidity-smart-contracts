@@ -80,8 +80,6 @@ event LinkAdded(uint linkId, string url);
   ) {
       //emit LinkVisited(link.url,linkId);
       LinkTemplate memory link = linkMapping[linkId];
-   return(
-       link.userAddress,
-       link.url
-   );
+   return( link.userAddress,link.url);
   }
+ }
