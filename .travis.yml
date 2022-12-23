@@ -19,6 +19,7 @@ script:
   - cd ../
   - mv docs mddocs
   - mv mddocs website/build/solidity-smart-contracts
+  - sed -i '6i <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2479144310234386" crossorigin="anonymous"></script>' website/build/**/*.html
 deploy:
   provider: pages
   skip-cleanup: true
